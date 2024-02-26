@@ -1,2 +1,2 @@
-def fun(a, b):
-	return a*b
+def fun(ia: int, ib: int) -> int:
+	return ia * ib
