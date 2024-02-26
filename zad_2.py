@@ -1,19 +1,20 @@
-def fun_a(a, b, c, d, e):
-	print(f"{a} {b} {c} {d} {e}")
+def fun_a(A: list):
+	for i in A:
+		print(i)
 
-def fun_b1(B):
+def fun_b1(B: list) -> list:
 	BB = []
 	for i in B:
-		BB.append(i*2)
+		BB.append(i * 2)
 	return BB
 
-def fun_b2(B):
-	return [k*2 for k in B]
+def fun_b2(B: list) -> list:
+	return [k * 2 for k in B]
 
-def fun_c(C):
+def fun_c(C: list):
 	for j in C:
-		if j%2==0:
-			print(f"{j}")
+		if j % 2 == 0:
+			print(j)
 
 def fun_d(D):
 	for l in D[1::2]:
