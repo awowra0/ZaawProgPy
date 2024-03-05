@@ -28,26 +28,29 @@ class Brawery:
         self.street = A[15]
 
     def __str__(self):
-        return f"""Browar '{self.name}' typu '{self.brewery_type}' o numerze
-         identyfikacyjnym {self.idd}, o adresie: '{self.address_1},
-         {self.address_2}, {self.address_3}'. Siedziba zlokalizowana w
-         '{self.city}, {self.state_province}, {self.postal_code},
-         {self.country}'. Położenie geograficzne: {self.longitude}
-         {self.latitude}. Telefon: {self.phone}. Strona internetowa:
-         {self.website_url}. Stan: '{self.state}', ulica '{self.street}'."""
+        return (f"Browar '{self.name}' typu '{self.brewery_type}'" +
+                f"o numerze identyfikacyjnym {self.idd}, o adresie: '" +
+                f"{self.address_1}, {self.address_2}, {self.address_3}'. " +
+                f"Siedziba zlokalizowana w '{self.city}, " +
+                f"{self.state_province}, {self.postal_code}, " +
+                f"{self.country}'. Położenie geograficzne: " +
+                f"{self.longitude} {self.latitude}. Telefon: " +
+                f"{self.phone}. Strona internetowa: {self.website_url}. " +
+                f"Stan: '{self.state}', ulica '{self.street}'.")
 
 
 def main(city=args.city):
     if city is None:
-        link = '''https://api.openbrewerydb.org/
-        v1/breweries/random?size=20'''
+        link = 'https://api.openbrewerydb.org/'
+        link = link + 'v1/breweries/random?size=20'
     else:
         link = 'https://api.openbrewerydb.org/v1/breweries?by_city='
-        link = link + city.lower() + '&per_page=20'
+        link = link + city.lower().strip() + '&per_page=20'
+    print(link)
     f = requests.get(link)
     page = f.json()
-    if len(page) < 1 or 'message' in page and page['message']
-    \ == "Couldn't find Brewery":
+    if (len(page) < 1 or 'message' in page and
+       page['message'] == "Couldn't find Brewery"):
         print("Couldn't find Brewery")
         return
     for i in range(min(20, len(page))):

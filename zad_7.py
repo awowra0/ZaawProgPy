@@ -21,13 +21,15 @@ class Brawery:
         self.street = A[15]
 
     def __str__(self):
-        return f"""Browar '{self.name}' typu '{self.brewery_type}' o numerze
-         identyfikacyjnym {self.idd}, o adresie: '{self.address_1},
-         {self.address_2}, {self.address_3}'. Siedziba zlokalizowana w
-         '{self.city}, {self.state_province}, {self.postal_code},
-         {self.country}'. Położenie geograficzne: {self.longitude}
-         {self.latitude}. Telefon: {self.phone}. Strona internetowa:
-         {self.website_url}. Stan: '{self.state}', ulica '{self.street}'."""
+        return (f"Browar '{self.name}' typu '{self.brewery_type}'" +
+                f"o numerze identyfikacyjnym {self.idd}, o adresie: '" +
+                f"{self.address_1}, {self.address_2}, {self.address_3}'. " +
+                f"Siedziba zlokalizowana w '{self.city}, " +
+                f"{self.state_province}, {self.postal_code}, " +
+                f"{self.country}'. Położenie geograficzne: " +
+                f"{self.longitude} {self.latitude}. Telefon: " +
+                f"{self.phone}. Strona internetowa: {self.website_url}. " +
+                f"Stan: '{self.state}', ulica '{self.street}'.")
 
 
 def main():
