@@ -1,3 +1,11 @@
+class Student:
+    def __init__(self, name: str, marks: list):
+        self.name = name
+        self.marks = marks
+
+    def is_passed(self) -> bool:
+        return sum(self.marks) / len(self.marks) > 50
+
 class Library:
     def __init__(self, city, street, zip_code, open_hours: str, phone):
         self.city = city
@@ -44,6 +52,8 @@ class Order:
     def __str__(self):
         return f"Zamówienie złożone przez {self.student.name}, dnia {self.order_date}, na książki: {[str(i) for i in self.books]} Zamówienie jest realizowane przez {self.employee}"
 
+caa = Student("Jan", [90,50,40,30])
+cab = Student("Stefan", [10,60,50,75])
 cbl1 = Library("Katowice","Katowicka 24",987,"10-18",301857432)
 cbl2 = Library("Chorzów", "Kościelna 19",990,"9-17",301858555)
 cbb1 = Book(cbl1,"13.12.2011","Jan","Kowalski",98)
