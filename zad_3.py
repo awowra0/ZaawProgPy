@@ -6,7 +6,10 @@ class Property:
         self.address = address
 
     def __str__(self):
-        return f"Nieruchomość zlokalizowanam w {self.address}, posiadająca {self.area} m^2. Liczba pokoi: {self.rooms}. Cena wynosi {self.price} zł."
+        return (f"Nieruchomość zlokalizowanam w {self.address}, " +
+                f"posiadająca {self.area} m^2. Liczba pokoi: " +
+                f"{self.rooms}. Cena wynosi {self.price} zł.")
+
 
 class House(Property):
     def __init__(self, area, rooms: int, price, address, plot: int):
@@ -14,7 +17,11 @@ class House(Property):
         self.plot = plot
 
     def __str__(self):
-        return f"Dom zlokalizowany w {self.address}, posiadający {self.area} m^2. Liczba pokoi: {self.rooms}. Rozmiar działki: {self.plot} m^2. Cena wynosi {self.price} zł."
+        return (f"Dom zlokalizowany w {self.address}, posiadający " +
+                f"{self.area} m^2. Liczba pokoi: {self.rooms}. " +
+                f"Rozmiar działki: {self.plot} m^2. " +
+                f"Cena wynosi {self.price} zł.")
+
 
 class Flat(Property):
     def __init__(self, area, rooms: int, price, address, floor):
@@ -22,7 +29,11 @@ class Flat(Property):
         self.floor = floor
 
     def __str__(self):
-        return f"Mieszkanie zlokalizowane w {self.address}, posiadające {self.area} m^2. Liczba pokoi: {self.rooms}. Piętro {self.floor}. Cena wynosi {self.price} zł."
+        return (f"Mieszkanie zlokalizowane w {self.address}, " +
+                f"posiadające {self.area} m^2. Liczba pokoi: " +
+                f"{self.rooms}. Piętro {self.floor}. " +
+                f"Cena wynosi {self.price} zł.")
+
 
 cca = House(120, 6, 433000, "Katowice, katowicka 6", 400)
 ccb = Flat(70, 4, 267000, "Chorzów, 1 maja 23", 3)
