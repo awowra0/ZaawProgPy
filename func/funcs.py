@@ -23,10 +23,3 @@ def fun_c(C: list):
 def fun_d(D):
     for la in D[1::2]:
         print(la)
-
-
-fun_a("Adam", "Adam", "Adam", "Aneta", "Al")
-print(fun_b1([0, 1, 2, 3, 4]))
-print(fun_b2([1, 2, 3, 4, 5]))
-fun_c(range(10))
-fun_d(range(10))
