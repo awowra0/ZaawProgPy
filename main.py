@@ -1,6 +1,4 @@
 import func.funcs as fun
-
-
 def main(num=4, A=range(5)):
     if num == 1:
         fun.fun_a(A)
