@@ -7,5 +7,5 @@ def fun_7():
     f = requests.get(link)
     page = f.json()
     for i in range(20):
-        i = zadania.Brawery([page[i][j] for j in page[i]])
+        i = zadania.Brawery.Brawery([page[i][j] for j in page[i]])
         print(i)

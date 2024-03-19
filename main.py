@@ -8,7 +8,7 @@ import zadania.zad_7
 import zadania.zad_8
 
 
-def main(num=4, A=[0,1,2,3], B=[2,3,4,5], a=2, b=3, c=4):
+def main(num=4, A=[0,1,2,3], B=[2,3,4,5], a=2, b=3, c=4, S="Berlin"):
     if num == 1:
         print(zadania.zad_1.fun_1(a, b))
     elif num == 2:
@@ -24,7 +24,7 @@ def main(num=4, A=[0,1,2,3], B=[2,3,4,5], a=2, b=3, c=4):
     elif num == 7:
         zadania.zad_7.fun_7()
     elif num == 8:
-        zadania.zad_8.fun_8()
+        zadania.zad_8.fun_8(S)
 
 
 if __name__ == "__main__":

@@ -24,7 +24,7 @@ def fun_8(city=args.city):
         print("Couldn't find Brewery")
         return
     for i in range(min(20, len(page))):
-        i = zadania.Brawery([page[i][j] for j in page[i]])
+        i = zadania.Brawery.Brawery([page[i][j] for j in page[i]])
         print(i)
 
 
