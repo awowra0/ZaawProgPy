@@ -4,4 +4,3 @@ def fun_3(ia: int) -> bool:
     else:
         print("Liczba nieparzysta")
     return ia % 2 == 0
-
