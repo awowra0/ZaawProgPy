@@ -1,6 +1,3 @@
-import requests
-
-
 class Brawery:
     def __init__(self, A):
         self.idd = A[0]
@@ -30,13 +27,3 @@ class Brawery:
                 f"{self.longitude} {self.latitude}. Telefon: " +
                 f"{self.phone}. Strona internetowa: {self.website_url}. " +
                 f"Stan: '{self.state}', ulica '{self.street}'.")
-
-
-def main():
-    link = 'https://api.openbrewerydb.org/v1/breweries/random?size=20'
-    f = requests.get(link)
-    page = f.json()
-#    print(page)
-    for i in range(20):
-        i = Brawery([page[i][j] for j in page[i]])
-        print(i)
