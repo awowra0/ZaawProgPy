@@ -4,8 +4,8 @@ import zadania.Book as bk
 
 
 class Order:
-    def __init__(self, employee: emp.Employee, student: stud.Student, books: list,
-                 order_date: str):
+    def __init__(self, employee: emp.Employee, student: stud.Student,
+                 books: list, order_date: str):
         self.employee = employee
         self.student = student
         self.books = books
